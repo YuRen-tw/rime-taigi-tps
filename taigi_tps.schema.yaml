@@ -1,0 +1,184 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: taigi_tps
+  name: 台語方音
+  version: "0.1"
+  author:
+    - Yu-Ren Pan <YuRen.Pan.0117@gmail.com>
+  description: |
+    對 bopomofo 來修改
+    
+    鍵盤對應：
+      ㄅ ㄉ ３ ２ ７ ５ ． ㄚ ㄞ ㄢ ｎ
+      ㄆ ㄊ ㄍ ㄐ Ｊ ㄗ ㄧ ㆦ ㆰ ㄣ
+      ㄇ ㄋ ㄎ ㄑ ㄫ ㄘ ㄨ ㄜ ㄠ ㄤ
+      ㆠ ㄌ ㄏ ㄒ ㆣ ㄙ ㆬ ㆤ ㆲ ㆭ
+
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 漢文, 西文 ]
+  - name: full_shape
+    reset: 0
+    states: [ 半形, 全形 ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - fluency_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - table_translator@custom_phrase
+    - script_translator
+  filters:
+    - uniquifier
+
+menu:
+  alternative_select_labels: [ Ａ, Ｂ, Ｃ, Ｄ, Ｅ, Ｆ, Ｇ, Ｈ, Ｉ, Ｊ ]
+  alternative_select_keys: 'ABCDEFGHIJ'
+
+speller:
+  alphabet: '1qaz2wsxedcrfvtgbyhnujm8ik,9ol.0p;/- 43657'
+  initials: '1qaz2wsxedcrfvtgbyhnujm8ik,9ol.0p;/-7'
+  finals: ' 43567'
+  delimiter: "'"
+  use_space: true
+  algebra:
+    # 變調
+    - derive/1/7/  # 第一調 → 第七調
+    - derive/2/1/  # 第二調 → 第一調
+    - derive/3/2/  # 第三調 → 第二調
+    - derive/7/3/  # 第七調 → 第三調
+    - derive/5/7/  # 第五調 → 第七調
+    - derive/5/3/  # 第五調 → 第三調
+    - derive/(?<![MNQ])4/2/  # -ㆷ 第四調 → 第二調
+    - derive/(?<![MNQ])8/3/  # -ㆷ 第八調 → 第三調
+    - xform/[48]/0/  # 入聲調（第四調、第八調）合併
+    # 音變
+    - derive/j/l/    # ㆡ、ㆢ → ㄌ
+    - derive/ji/gi/  # ㆢ → ㆣ
+    - derive/iaN/ieN/  # ㄧㄢ、ㄧㄚㆵ → ㄧㄢ、ㄧㆤㆵ
+    - derive/ieN/eN/   # ㄧㄢ、ㄧㆤㆵ → ㆤㄣ、ㆤㆵ
+    # 注音
+    - derive/(?<!i)oQ/uQ/  # 用 ㄨㆭ（注音的 ㄨㄥ）來拍 ㆲ
+    - derive/ioQ/MQ/       # 用 ㆬㆭ（注音的 ㄩㄥ）來拍 ㄧㆲ
+    # 入聲調
+    - derive/([iao])M0/$1p0/   # 用 ㄚㄅ． 來拍 ㄚㆴ
+    - derive/([iuae])N0/$1t0/  # 用 ㄚㄉ． 來拍 ㄚㆵ
+    - derive/([iao])Q0/$1k0/   # 用 ㄚㄍ． 來拍 ㄚㆻ
+    # 方音符號會分 ㆢㄐㄑㄒ 和 ㆡㄗㄘㄙ
+    #- xform/ji/Ji/  # 毋過咱共 ㆢ 和 ㆡ 合併矣
+    - xform/zi/Zi/  # ㄐㄧ
+    - xform/ci/Ci/  # ㄑㄧ
+    - xform/si/Si/  # ㄒㄧ
+    # 方音韻母
+    - derive/oM/aM/  # ㆦㆬ、ㆰ（併入）
+    - derive/aM/B/   # ㄚㆬ、ㆰ
+    - xform/aN/D/    # ㄢ
+    - xform/aQ/G/    # ㄤ
+    - derive/oQ/Y/   # ㆦㆭ、ㆲ
+    - abbrev/[iuaoeIU]+X/X/  # 用 ｎ 代表所有的鼻音母音
+    - abbrev/[iuaoøeIUBDGYMNQ]+0/0/  # 用 ． 代表所有的入聲韻母
+    - abbrev/^([pPbmtTlnkKgqzcjsZCSh]).+$/$1/  # 會當干焦拍聲母
+    - abbrev/^(\D+)([123579])$/$1/  # 除了第四調、第八調，調號會當免拍
+    - abbrev/^([pPbmtTlnkKgqzcsjZCSh]).+(\d)$/$1$2/  # 會當干焦拍子音+調號
+    - xlit|pPmbtTnlkKhZCSjqgzcsiuMaoøeIBUYDNGQX123570|1qaz2wsxedcrfvtgbyhnujm8ik,9ol.0p;/- 43657|
+
+translator:
+  dictionary: taigi_yu
+  prism: taigi_tps
+  spelling_hints: 3
+  comment_format:
+    - xform/^/\t→ /
+    - xform/'/ /
+    - xlit|pPbmtTlnkKgqzcshiuaoøeIUMNQX|ㄅㄆㆠㄇㄉㄊㄌㄋㄍㄎㆣㄫㄗㄘㆡㄙㄏㄧㄨㄚㆦㄜㆤㄞㄠㆬㄣㆭｎ|
+    # 方音符號會分 ㆢㄐㄑㄒ 和 ㆡㄗㄘㄙ
+    - xform/ㄗㄧ/ㄐㄧ/
+    - xform/ㄘㄧ/ㄑㄧ/
+    - xform/ㆡㄧ/ㆢㄧ/
+    - xform/ㄙㄧ/ㄒㄧ/
+    # 入聲調
+    - xform/(?<!ㄧ|ㄚ|ㆦ)ㆬ([48])/ㆬㆷ$1/
+    - xform/(?<!ㄧ|ㄚ|ㆦ)ㆭ([48])/ㆭㆷ$1/
+    - xform/ㆬ([48])/ㆴ$1/
+    - xform/ㄣ([48])/ㆵ$1/
+    - xform/ㆭ([48])/ㆻ$1/
+    - xform/(?<!ㆬ|ㄣ|ㆭ)([48])/ㆷ$1/
+    # 韻母
+    - xform/ㄚㆬ/ㆰ/
+    - xform/ㆦㆬ/ㆱ/
+    - xform/ㄚㄣ/ㄢ/
+    - xform/ㄚㆭ/ㄤ/
+    - xform/ㆦㆭ/ㆲ/
+    - xform/ㄧㆭ/ㄧㄥ/
+    - xform/ㄨㆭ/ㆲ/
+    - xform/ㆬㆭ/ㄧㆲ/
+    # 聲調
+    - xlit|12357|ˉˋ˪ˊ˫|
+    - xform/4//
+    - xform/8/˙/
+  preedit_format:
+    - xform/ /ˉ/
+    - xform/'/ /
+    - xlit|1qaz2wsxedcrfvtgbyhnujm8ik,9ol.0p;/-43657|ㄅㄆㄇㆠㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㆡㄫㆣㄗㄘㄙㄧㄨㆬㄚㆦㄜㆤㄞㆰㄠㆲㄢㄣㄤㆭｎˋ˪ˊ˫．|
+    # 咱共 ㆢ 和 ㆡ 合併
+    - xform/ㆡㄧ/ㆢㄧ/
+    # 韻母
+    - xform/ㄚㆬ/ㆰ/
+    - xform/ㆦㆬ/ㆱ/
+    - xform/ㆦㆭ/ㆲ/
+    - xform/ㄧㆭ/ㄧㄥ/
+    - xform/ㄨㆭ/ㆲ/
+    - xform/ㆬㆭ/ㄧㆲ/
+    # 鼻音
+    - xform/ㄧｎ/ㆪ/
+    - xform/ㄨｎ/ㆫ/
+    - xform/ㄚｎ/ㆩ/
+    - xform/ㆦｎ/ㆧ/
+    - xform/ㆤｎ/ㆥ/
+    - xform/ㄞｎ/ㆮ/
+    - xform/ㄠｎ/ㆯ/
+    # 入聲調
+    - xform/(ㄧ|ㄚ|ㆦ)(ㄅ|ㆬ)．/$1ㆴ/
+    - xform/ㆰ．/ㄚㆴ/
+    - xform/ㆱ．/ㆦㆴ/
+    - xform/(ㄧ|ㄨ|ㄚ|ㆤ)(ㄉ|ㄣ)．/$1ㆵ/
+    - xform/ㄢ．/ㄚㆵ/
+    - xform/(ㄧ|ㄚ|ㆦ)(ㄍ|ㄥ)．/$1ㆻ/
+    - xform/ㄤ．/ㄚㆻ/
+    - xform/ㆲ．/ㆦㆻ/
+    - xform/(ㄧ|ㄨ|ㄚ|ㄛ|ㄜ|ㆤ|ㄞ|ㄠ|ㆬ|ㆭ)．/$1ㆷ/
+
+punctuator:
+  import_preset: symbols_yu_alpha
+
+key_binder:
+  import_preset: default
+  bindings:
+    - { when: has_menu, accept: comma, send: comma }      # ㆤ
+    - { when: has_menu, accept: period, send: period }    # ㆲ
+    - { when: has_menu, accept: minus, send: minus }      # ｎ
+    - { when: paging, accept: minus, send: Page_Up }
+    - { when: has_menu, accept: equal, send: Page_Down }
+
+recognizer:
+  patterns:
+    email: ^[a-z][-_.0-9a-z]*@.*$
+    uppercase: ^[A-Z][-_+.'0-9A-Za-z]*$
+    url: ^(www[.]|https?:|ftp:|mailto:).*$
+    punct: `[^\s]$
