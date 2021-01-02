@@ -7,31 +7,31 @@ version: "0.1"
 sort: by_weight
 use_preset_vocabulary: false
 import_tables:
-  - taigi_han
-#  - taigi_tl
-#  - taigi_poj
+  - taigi_yu.han
+#  - taigi_yu.tl
+#  - taigi_yu.poj
 ...
-ㄅ	po1
-ㄆ	Po1
-ㆠ	bo1
-ㄇ	mo1
-ㄉ	to1
-ㄊ	To1
-ㄌ	lo1
-ㄋ	no1
-ㄍ	ko1
-ㄎ	Ko1
-ㆣ	go1
-ㄫ	qo1
+ㄅ	pø1
+ㄆ	Pø1
+ㆠ	bø1
+ㄇ	mø1
+ㄉ	tø1
+ㄊ	Tø1
+ㄌ	lø1
+ㄋ	nø1
+ㄍ	kø1
+ㄎ	Kø1
+ㆣ	gø1
+ㄫ	qø1
 ㄐ	zi1
 ㄑ	ci1
 ㆢ	ji1
 ㄒ	si1
-ㄗ	zo1
-ㄘ	co1
-ㆡ	jo1
-ㄙ	so1
-ㄏ	ho1
+ㄗ	zø1
+ㄘ	cø1
+ㆡ	jø1
+ㄙ	sø1
+ㄏ	hø1
 ㄚ	a1
 ㆤ	e1
 ㄜ	ø1

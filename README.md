@@ -5,10 +5,10 @@
 1. 本方案基於 RIME 輸入法引擎
 2. 方案配置檔：`taigi_tps.schema.yaml`
 3. 字典檔：（詳見[下方說明](#台語字典)）
-  - `taigi_yu.dict.yaml`
-  - `taigi_yu.han.dict.yaml`
-  - `taigi_yu.tl.dict.yaml`（暫定）
-  - `taigi_yu.poj.dict.yaml`（暫定）
+    - `taigi_yu.dict.yaml`
+    - `taigi_yu.han.dict.yaml`
+    - `taigi_yu.tl.dict.yaml`（暫定）
+    - `taigi_yu.poj.dict.yaml`（暫定）
 
 ## 鍵盤配置
 

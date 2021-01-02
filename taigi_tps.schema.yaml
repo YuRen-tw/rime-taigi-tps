@@ -43,7 +43,6 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
-    - table_translator@custom_phrase
     - script_translator
   filters:
     - uniquifier
@@ -106,7 +105,7 @@ translator:
   comment_format:
     - xform/^/\t→ /
     - xform/'/ /
-    - xlit|pPbmtTlnkKgqzcshiuaoøeIUMNQX|ㄅㄆㆠㄇㄉㄊㄌㄋㄍㄎㆣㄫㄗㄘㆡㄙㄏㄧㄨㄚㆦㄜㆤㄞㄠㆬㄣㆭｎ|
+    - xlit|pPbmtTlnkKgqzcjshiuaoøeIUMNQX|ㄅㄆㆠㄇㄉㄊㄌㄋㄍㄎㆣㄫㄗㄘㆡㄙㄏㄧㄨㄚㆦㄜㆤㄞㄠㆬㄣㆭｎ|
     # 方音符號會分 ㆢㄐㄑㄒ 和 ㆡㄗㄘㄙ
     - xform/ㄗㄧ/ㄐㄧ/
     - xform/ㄘㄧ/ㄑㄧ/
@@ -118,7 +117,7 @@ translator:
     - xform/ㆬ([48])/ㆴ$1/
     - xform/ㄣ([48])/ㆵ$1/
     - xform/ㆭ([48])/ㆻ$1/
-    - xform/(?<!ㆬ|ㄣ|ㆭ)([48])/ㆷ$1/
+    - xform/(?<!ㆴ|ㆵ|ㆻ)([48])/ㆷ$1/
     # 韻母
     - xform/ㄚㆬ/ㆰ/
     - xform/ㆦㆬ/ㆱ/
@@ -181,4 +180,4 @@ recognizer:
     email: ^[a-z][-_.0-9a-z]*@.*$
     uppercase: ^[A-Z][-_+.'0-9A-Za-z]*$
     url: ^(www[.]|https?:|ftp:|mailto:).*$
-    punct: `[^\s]$
+    punct: '`[^\s]$'
