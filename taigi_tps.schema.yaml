@@ -73,6 +73,11 @@ speller:
     - derive/ji/gi/  # ㆢ → ㆣ
     - derive/iaN/ieN/  # ㄧㄢ、ㄧㄚㆵ → ㄧㄢ、ㄧㆤㆵ
     - derive/ieN/eN/   # ㄧㄢ、ㄧㆤㆵ → ㆤㄣ、ㆤㆵ
+    # 方音符號會分 ㆢㄐㄑㄒ 和 ㆡㄗㄘㄙ
+    #- xform/ji/Ji/  # 毋過咱共 ㆢ 和 ㆡ 合併矣
+    - xform/zi/Zi/  # ㄐㄧ
+    - xform/ci/Ci/  # ㄑㄧ
+    - xform/si/Si/  # ㄒㄧ
     # 注音
     - derive/(?<!i)oQ/uQ/  # 用 ㄨㆭ（注音的 ㄨㄥ）來拍 ㆲ
     - derive/ioQ/MQ/       # 用 ㆬㆭ（注音的 ㄩㄥ）來拍 ㄧㆲ
@@ -80,11 +85,6 @@ speller:
     - derive/([iao])M0/$1p0/   # 用 ㄚㄅ． 來拍 ㄚㆴ
     - derive/([iuae])N0/$1t0/  # 用 ㄚㄉ． 來拍 ㄚㆵ
     - derive/([iao])Q0/$1k0/   # 用 ㄚㄍ． 來拍 ㄚㆻ
-    # 方音符號會分 ㆢㄐㄑㄒ 和 ㆡㄗㄘㄙ
-    #- xform/ji/Ji/  # 毋過咱共 ㆢ 和 ㆡ 合併矣
-    - xform/zi/Zi/  # ㄐㄧ
-    - xform/ci/Ci/  # ㄑㄧ
-    - xform/si/Si/  # ㄒㄧ
     # 方音韻母
     - derive/oM/aM/  # ㆦㆬ、ㆰ（併入）
     - derive/aM/B/   # ㄚㆬ、ㆰ
