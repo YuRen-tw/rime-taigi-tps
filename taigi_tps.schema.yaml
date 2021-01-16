@@ -4,7 +4,7 @@
 schema:
   schema_id: taigi_tps
   name: 台語方音
-  version: "0.1"
+  version: '0.2'
   author:
     - Yu-Ren Pan <YuRen.Pan.0117@gmail.com>
   description: |
@@ -65,38 +65,44 @@ speller:
     - derive/7/3/  # 第七調 → 第三調
     - derive/5/7/  # 第五調 → 第七調
     - derive/5/3/  # 第五調 → 第三調
-    - derive/(?<![MNQ])4/2/  # -ㆷ 第四調 → 第二調
-    - derive/(?<![MNQ])8/3/  # -ㆷ 第八調 → 第三調
+    - derive/(?<![BDG])4/2/  # -ㆷ 第四調 → 第二調
+    - derive/(?<![BDG])8/3/  # -ㆷ 第八調 → 第三調
     - xform/[48]/0/  # 入聲調（第四調、第八調）合併
     # 音變
-    - derive/j/l/    # ㆡ、ㆢ → ㄌ
+    - derive/j/d/    # ㆡ、ㆢ → ㄌ
     - derive/ji/gi/  # ㆢ → ㆣ
-    - derive/iaN/ieN/  # ㄧㄢ、ㄧㄚㆵ → ㄧㄢ、ㄧㆤㆵ
-    - derive/ieN/eN/   # ㄧㄢ、ㄧㆤㆵ → ㆤㄣ、ㆤㆵ
+    - derive/iaD/ieD/  # ㄧㄢ、ㄧㄚㆵ → ㄧㄢ、ㄧㆤㆵ
+    - derive/ieD/eD/   # ㄧㄢ、ㄧㆤㆵ → ㆤㄣ、ㆤㆵ
+    # 方言差
+    - derive/eN/iN/   # ㆪ → ㆥ
     # 方音符號會分 ㆢㄐㄑㄒ 和 ㆡㄗㄘㄙ
     #- xform/ji/Ji/  # 毋過咱共 ㆢ 和 ㆡ 合併矣
     - xform/zi/Zi/  # ㄐㄧ
     - xform/ci/Ci/  # ㄑㄧ
     - xform/si/Si/  # ㄒㄧ
+    # 方音符號會分 ㄇㄋㄫ 和 ㆠㄌㆣ
+    - xform/b(.+)N/m$1/  # ㄇ
+    - xform/d(.+)N/n$1/  # ㄋ
+    - xform/g(.+)N/q$1/  # ㄫ
     # 注音
-    - derive/(?<!i)oQ/uQ/  # 用 ㄨㆭ（注音的 ㄨㄥ）來拍 ㆲ
-    - derive/ioQ/MQ/       # 用 ㆬㆭ（注音的 ㄩㄥ）來拍 ㄧㆲ
+    - derive/(?<!i)oG/uG/  # 用 ㄨㆭ（注音的 ㄨㄥ）來拍 ㆲ
+    - derive/ioG/BG/       # 用 ㆬㆭ（注音的 ㄩㄥ）來拍 ㄧㆲ
     # 入聲調
-    - derive/([iao])M0/$1p0/   # 用 ㄚㄅ． 來拍 ㄚㆴ
-    - derive/([iuae])N0/$1t0/  # 用 ㄚㄉ． 來拍 ㄚㆵ
-    - derive/([iao])Q0/$1k0/   # 用 ㄚㄍ． 來拍 ㄚㆻ
+    - derive/([iao])B0/$1p0/   # 用 ㄚㄅ． 來拍 ㄚㆴ
+    - derive/([iuae])D0/$1t0/  # 用 ㄚㄉ． 來拍 ㄚㆵ
+    - derive/([iao])G0/$1k0/   # 用 ㄚㄍ． 來拍 ㄚㆻ
     # 方音韻母
-    - derive/oM/aM/  # ㆦㆬ、ㆰ（併入）
-    - derive/aM/B/   # ㄚㆬ、ㆰ
-    - xform/aN/D/    # ㄢ
-    - xform/aQ/G/    # ㄤ
-    - derive/oQ/Y/   # ㆦㆭ、ㆲ
+    - derive/oB/aB/  # ㆦㆬ、ㆰ（併入）
+    - derive/aB/M/   # ㄚㆬ、ㆰ
+    - xform/aD/L/    # ㄢ
+    - xform/aG/Q/    # ㄤ
+    - derive/oG/Y/   # ㆦㆭ、ㆲ
     - abbrev/[iuaoeIU]+X/X/  # 用 ｎ 代表所有的鼻音母音
-    - abbrev/[iuaoøeIUBDGYMNQ]+0/0/  # 用 ． 代表所有的入聲韻母
-    - abbrev/^([pPbmtTlnkKgqzcjsZCSh]).+$/$1/  # 會當干焦拍聲母
+    - abbrev/[iuaoøeIUMLQYBDG]+0/0/  # 用 ． 代表所有的入聲韻母
+    - abbrev/^([pPbmtTdnkKgqzcjsZCSh]).+$/$1/  # 會當干焦拍聲母
     - abbrev/^(\D+)([123579])$/$1/  # 除了第四調、第八調，調號會當免拍
-    - abbrev/^([pPbmtTlnkKgqzcsjZCSh]).+(\d)$/$1$2/  # 會當干焦拍子音+調號
-    - xlit|pPmbtTnlkKhZCSjqgzcsiuMaoøeIBUYDNGQX123570|1qaz2wsxedcrfvtgbyhnujm8ik,9ol.0p;/- 43657|
+    - abbrev/^([pPbmtTdnkKgqzcsjZCSh]).+(\d)$/$1$2/  # 會當干焦拍子音+調號
+    - xlit|pPmbtTndkKhZCSjqgzcsiuBaoøeIMUYLDQGN123570|1qaz2wsxedcrfvtgbyhnujm8ik,9ol.0p;/- 43657|
 
 translator:
   dictionary: taigi_yu
@@ -105,19 +111,31 @@ translator:
   comment_format:
     - xform/^/\t→ /
     - xform/'/ /
-    - xlit|pPbmtTlnkKgqzcjshiuaoøeIUMNQX|ㄅㄆㆠㄇㄉㄊㄌㄋㄍㄎㆣㄫㄗㄘㆡㄙㄏㄧㄨㄚㆦㄜㆤㄞㄠㆬㄣㆭｎ|
+    - xlit|pPbtTdkKgzcjshiuaoøeIUBDGN|ㄅㄆㆠㄉㄊㄌㄍㄎㆣㄗㄘㆡㄙㄏㄧㄨㄚㆦㄜㆤㄞㄠㆬㄣㆭｎ|
     # 方音符號會分 ㆢㄐㄑㄒ 和 ㆡㄗㄘㄙ
     - xform/ㄗㄧ/ㄐㄧ/
     - xform/ㄘㄧ/ㄑㄧ/
     - xform/ㆡㄧ/ㆢㄧ/
     - xform/ㄙㄧ/ㄒㄧ/
+    # 方音符號會分 ㄇㄋㄫ 和 ㆠㄌㆣ
+    - xform/ㆠ([^\s]+)ｎ/ㄇ$1/
+    - xform/ㄌ([^\s]+)ｎ/ㄋ$1/
+    - xform/ㆣ([^\s]+)ｎ/ㄫ$1/
     # 入聲調
     - xform/(?<!ㄧ|ㄚ|ㆦ)ㆬ([48])/ㆬㆷ$1/
     - xform/(?<!ㄧ|ㄚ|ㆦ)ㆭ([48])/ㆭㆷ$1/
     - xform/ㆬ([48])/ㆴ$1/
     - xform/ㄣ([48])/ㆵ$1/
     - xform/ㆭ([48])/ㆻ$1/
-    - xform/(?<!ㆴ|ㆵ|ㆻ)([48])/ㆷ$1/
+    - xform/(?<!ㆴ|ㆵ|ㆻ|ㆷ)([48])/ㆷ$1/
+    # 鼻音
+    - xform/ㄧｎ/ㆪ/
+    - xform/ㄨｎ/ㆫ/
+    - xform/ㄚｎ/ㆩ/
+    - xform/ㆦｎ/ㆧ/
+    - xform/ㆤｎ/ㆥ/
+    - xform/ㄞｎ/ㆮ/
+    - xform/ㄠｎ/ㆯ/
     # 韻母
     - xform/ㄚㆬ/ㆰ/
     - xform/ㆦㆬ/ㆱ/

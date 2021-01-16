@@ -3,7 +3,7 @@
 
 ---
 name: taigi_yu
-version: "0.1"
+version: "0.2"
 sort: by_weight
 use_preset_vocabulary: false
 import_tables:
@@ -14,15 +14,15 @@ import_tables:
 ㄅ	pø1
 ㄆ	Pø1
 ㆠ	bø1
-ㄇ	mø1
+ㄇ	bøN1
 ㄉ	tø1
 ㄊ	Tø1
-ㄌ	lø1
-ㄋ	nø1
+ㄌ	dø1
+ㄋ	døN1
 ㄍ	kø1
 ㄎ	Kø1
 ㆣ	gø1
-ㄫ	qø1
+ㄫ	gøN1
 ㄐ	zi1
 ㄑ	ci1
 ㆢ	ji1
@@ -40,19 +40,19 @@ import_tables:
 ㄨ	u1
 ㄞ	I1
 ㄠ	U1
-ㆩ	aX1
-ㆥ	eX1
-ㆧ	oX1
-ㆪ	iX1
-ㆫ	uX1
-ㆮ	IX1
-ㆯ	UX1
-ㆰ	aM1
-ㆱ	oM1
-ㄢ	aN1
-ㄣ	N1
-ㄤ	aQ1
-ㆲ	oQ1
-ㄥ	øQ1
-ㆬ	M1
-ㆭ	Q1
+ㆩ	aN1
+ㆥ	eN1
+ㆧ	oN1
+ㆪ	iN1
+ㆫ	uN1
+ㆮ	IN1
+ㆯ	UN1
+ㆰ	aB1
+ㆱ	oB1
+ㄢ	aD1
+ㄣ	D1
+ㄤ	aG1
+ㆲ	oG1
+ㄥ	øG1
+ㆬ	B1
+ㆭ	G1

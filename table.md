@@ -2,19 +2,12 @@
 
 ## 目錄
 
-- [代號](#代號)
 - [聲母](#聲母)
 - [韻母](#韻母)
-  - [入聲](#入聲)
-  - [純母音](#純母音)
-  - [鼻化韻母](#鼻化韻母)
-  - [ㆬ韻尾](#ㆬ韻尾)
-  - [ㄯ韻尾](#ㄯ韻尾)
-  - [ㆭ韻尾](#ㆭ韻尾)
-  - [韻化子音（`ㆬ`、`ㆭ`）](#韻化子音)
+  - [入聲](#入聲)、[純母音](#純母音)、[鼻化韻母](#鼻化韻母)、[ㆬ韻尾](#ㆬ韻尾)、[ㄣ韻尾](#ㄣ韻尾)、[ㆭ韻尾](#ㆭ韻尾)、[韻化子音（`ㆬ`、`ㆭ`）](#韻化子音)
 - [本方案拼音](#本方案拼音)
 
-## 代號
+### 代號
 
 | TPS | IPA | Yu | TL | POJ | BP | Trad |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
@@ -29,15 +22,15 @@
 | ㄅ | p   | `p` | p   | p   | b  | 邊 |
 | ㄆ | pʰ  | `P` | ph  | ph  | p  | 頗 |
 | ㆠ | b   | `b` | b   | b   | bb | 門 |
-| ㄇ | m   | `m` | m   | m   | bb | 門 |
+| ㄇ | m   | `b` | m   | m   | bb | 門 |
 | ㄉ | t   | `t` | t   | t   | d  | 地 |
 | ㄊ | tʰ  | `T` | th  | th  | t  | 他 |
-| ㄌ | l   | `l` | l   | l   | l  | 柳 |
-| ㄋ | n   | `n` | n   | n   | l  | 柳 |
+| ㄌ | l   | `d` | l   | l   | l  | 柳 |
+| ㄋ | n   | `d` | n   | n   | l  | 柳 |
 | ㄍ | k   | `k` | k   | k   | g  | 求 |
 | ㄎ | kʰ  | `K` | kh  | kh  | k  | 去 |
 | ㆣ | g   | `g` | g   | g   | gg | 語 |
-| ㄫ | ŋ   | `q` | ng  | ng  | gg | 語 |
+| ㄫ | ŋ   | `g` | ng  | ng  | gg | 語 |
 | ㄐ | t͡ɕ  | `z` | ts  | ch  | z  | 曾 |
 | ㄑ | t͡ɕʰ | `c` | tsh | chh | c  | 出 |
 | ㆢ | d͡ʑ  | `j` | j   | j   | zz | 入 |
@@ -63,16 +56,16 @@
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | ㄚ  | a  | `a`  | a    | a   | a   | 膠 |
 | ㄚㆷ | aʔ | `a`  | ah   | ah  | ah  | 膠 |
-| ㆩ  | ã  | `aX` | ann  | aⁿ  | na  | 監 |
-| ㆩㆷ | ãʔ | `aX` | annh | ahⁿ | nah | 監 |
-| ㆰ  | am | `aM` | am   | am  | am  | 甘 |
-| ㄚㆴ | ap̚ | `aM` | ap   | ap  | ap  | 甘 |
-| ㄢ  | an | `aN` | an   | an  | an  | 干 |
-| ㄚㆵ | at̚ | `aN` | at   | at  | at  | 干 |
-| ㄤ  | aŋ | `aQ` | ang  | ang | ang | 江 |
-| ㄚㆻ | ak̚ | `aQ` | ak   | ak  | ak  | 江 |
+| ㆩ  | ã  | `aN` | ann  | aⁿ  | na  | 監 |
+| ㆩㆷ | ãʔ | `aN` | annh | ahⁿ | nah | 監 |
+| ㆰ  | am | `aB` | am   | am  | am  | 甘 |
+| ㄚㆴ | ap̚ | `aB` | ap   | ap  | ap  | 甘 |
+| ㄢ  | an | `aD` | an   | an  | an  | 干 |
+| ㄚㆵ | at̚ | `aD` | at   | at  | at  | 干 |
+| ㄤ  | aŋ | `aG` | ang  | ang | ang | 江 |
+| ㄚㆻ | ak̚ | `aG` | ak   | ak  | ak  | 江 |
 
-- `ㆴ`、`ㆵ`、`ㆻ` 可視為 `ㆬ`、`ㄯ`、`ㆭ` 音在入聲調時的變體
+- `ㆴ`、`ㆵ`、`ㆻ` 可視為 `ㆬ`、`ㄣ`、`ㆭ` 音在入聲調時的變體
 - 下方各部分另外補充入聲時的方音符號
 
 ### 純母音
@@ -100,58 +93,58 @@
 
 | TPS | 入 | IPA | Yu | TL | POJ | BP | Trad |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| ㆩ   | ㆩㆷ   | ã   | `aX`  | ann   | aⁿ   | na   | 監 |
-| ㆥ   | ㆥㆷ   | ẽ   | `eX`  | enn   | eⁿ   | ne   | 更 |
-| ㆧ	   | ㆧㆷ   | ɔ̃   | `oX`  | onn   | oⁿ   | noo  | 姑 |
-| ㆪ   | ㆪㆷ   | ĩ   | `iX`  | inn   | iⁿ   | ni   | 梔 |
-| ㆫ   |       | ũ   | `uX`  |       |      |      |    |
-| ㆮ   | ㆮㆷ   | ãĩ  | `IX`  | ainn  | aiⁿ  | nai  | 閒 |
-| ㆯ   | ㆯㆷ   | ãũ  | `UX`  | aunn  | auⁿ  | nau  | 爻 |
-| ㄧㆩ | ㄧㆩㆷ | ĩã  | `iaX` | iann  | iaⁿ  | nia  | 驚 |
-| ㄧㆫ | ㄧㆫㆷ | ĩũ  | `iuX` | iunn  | iuⁿ  | niu  | 薑 |
-| ㄧㆯ | ㄧㆯㆷ | ĩãũ | `iUX` | iaunn | iauⁿ | niau | 嘄 |
-| ㄨㆩ | ㄨㆩㆷ | ũã  | `uaX` | uann  | oaⁿ  | nua  | 官 |
-| ㄨㆪ | ㄨㆪㆷ | ũĩ  | `uiX` | uinn  | uiⁿ  | nui  | 口關 |
-| ㄨㆮ | ㄨㆮㆷ | ũãĩ | `uIX` | uainn | oaiⁿ | noai | 糜 |
+| ㆩ   | ㆩㆷ   | ã   | `aN`  | ann   | aⁿ   | na   | 監 |
+| ㆥ   | ㆥㆷ   | ẽ   | `eN`  | enn   | eⁿ   | ne   | 更 |
+| ㆧ	   | ㆧㆷ   | ɔ̃   | `oN`  | onn   | oⁿ   | noo  | 姑 |
+| ㆪ   | ㆪㆷ   | ĩ   | `iN`  | inn   | iⁿ   | ni   | 梔 |
+| ㆫ   |       | ũ   | `uN`  |       |      |      |    |
+| ㆮ   | ㆮㆷ   | ãĩ  | `IN`  | ainn  | aiⁿ  | nai  | 閒 |
+| ㆯ   | ㆯㆷ   | ãũ  | `UN`  | aunn  | auⁿ  | nau  | 爻 |
+| ㄧㆩ | ㄧㆩㆷ | ĩã  | `iaN` | iann  | iaⁿ  | nia  | 驚 |
+| ㄧㆫ | ㄧㆫㆷ | ĩũ  | `iuN` | iunn  | iuⁿ  | niu  | 薑 |
+| ㄧㆯ | ㄧㆯㆷ | ĩãũ | `iUN` | iaunn | iauⁿ | niau | 嘄 |
+| ㄨㆩ | ㄨㆩㆷ | ũã  | `uaN` | uann  | oaⁿ  | nua  | 官 |
+| ㄨㆪ | ㄨㆪㆷ | ũĩ  | `uiN` | uinn  | uiⁿ  | nui  | 口關 |
+| ㄨㆮ | ㄨㆮㆷ | ũãĩ | `uIN` | uainn | oaiⁿ | noai | 糜 |
 
 ### ㆬ韻尾
 
 | TPS | 入 | IPA | Yu | TL | POJ | BP | Trad |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| ㆰ   | ㄚㆴ   | am  | `aM`  | am  | am  | am  | 甘 |
-| ㆱ   | ㆦㆴ   | ɔm  | `oM`  | om  | om  |     | 箴 |
-| ㄧㆬ | ㄧㆴ   | im  | `iM`  | im  | im  | im  | 金 |
-| ㄧㆰ | ㄧㄚㆴ | iam | `iaM` | iam | iam | iam | 兼 |
+| ㆰ   | ㄚㆴ   | am  | `aB`  | am  | am  | am  | 甘 |
+| ㆱ   | ㆦㆴ   | ɔm  | `oB`  | om  | om  |     | 箴 |
+| ㄧㆬ | ㄧㆴ   | im  | `iB`  | im  | im  | im  | 金 |
+| ㄧㆰ | ㄧㄚㆴ | iam | `iaB` | iam | iam | iam | 兼 |
 
-### ㄯ韻尾
+### ㄣ韻尾
 
 | TPS | 入 | IPA | Yu | TL | POJ | BP | Trad |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| ㄣ   |       | n   | `N`   |     |     |     |    |
-| ㄢ   | ㄚㆵ   | an  | `aN`  | an  | an  | an  | 干 |
-| ㄧㄣ | ㄧㆵ   | in  | `iN`  | in  | in  | in  | 巾 |
-| ㄨㄣ | ㄨㆵ   | un  | `uN`  | un  | un  | un  | 君 |
-| ㄧㄢ | ㄧㄚㆵ | ian | `iaN` | ian | ian | ian | 堅 |
-| ㄨㄢ | ㄨㄚㆵ | uan | `uaN` | uan | oan | uan | 觀 |
+| ㄣ   |       | n   | `D`   |     |     |     |    |
+| ㄢ   | ㄚㆵ   | an  | `aD`  | an  | an  | an  | 干 |
+| ㄧㄣ | ㄧㆵ   | in  | `iD`  | in  | in  | in  | 巾 |
+| ㄨㄣ | ㄨㆵ   | un  | `uD`  | un  | un  | un  | 君 |
+| ㄧㄢ | ㄧㄚㆵ | ian | `iaD` | ian | ian | ian | 堅 |
+| ㄨㄢ | ㄨㄚㆵ | uan | `uaD` | uan | oan | uan | 觀 |
 
 ### ㆭ韻尾
 
 | TPS | 入 | IPA | Yu | TL | POJ | BP | Trad |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| ㄤ   | ㄚㆻ   | aŋ  | `aQ`  | ang  | ang  | ang  | 江 |
-| ㄥ   |       | əŋ  | `øQ`  |      |      |      |    |
-| ㆲ   | ㆦㆻ   | ɔŋ  | `oQ`  | ong  | ong  | ong  | 公 |
-| ㄧㄤ | ㄧㄚㆻ | iaŋ | `iaQ` | iang | iang | iang | 姜 |
-| ㄧㄥ | ㄧㆻ   | iəŋ | `iQ`  | ing  | eng  | ing  | 經 |
-| ㄧㆲ | ㄧㆦㆻ | iɔŋ | `ioQ` | iong | iong | iong | 恭 |
-| ㄨㄤ | ㄨㄚㆻ | uaŋ | `uaQ` | uang | oang | uang | 光 |
+| ㄤ   | ㄚㆻ   | aŋ  | `aG`  | ang  | ang  | ang  | 江 |
+| ㄥ   |       | əŋ  | `øG`  |      |      |      |    |
+| ㆲ   | ㆦㆻ   | ɔŋ  | `oG`  | ong  | ong  | ong  | 公 |
+| ㄧㄤ | ㄧㄚㆻ | iaŋ | `iaG` | iang | iang | iang | 姜 |
+| ㄧㄥ | ㄧㆻ   | iəŋ | `iG`  | ing  | eng  | ing  | 經 |
+| ㄧㆲ | ㄧㆦㆻ | iɔŋ | `ioG` | iong | iong | iong | 恭 |
+| ㄨㄤ | ㄨㄚㆻ | uaŋ | `uaG` | uang | oang | uang | 光 |
 
 ### 韻化子音
 
 | TPS | 入 | IPA | Yu | TL | POJ | BP | Trad |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| ㆬ | ㆬㆷ | m̩ | `M` | m  | m  | m  | 姆 |
-| ㆭ | ㆭㆷ | ŋ̍ | `Q` | ng | ng | ng | 禈 |
+| ㆬ | ㆬㆷ | m̩ | `B` | m  | m  | m  | 姆 |
+| ㆭ | ㆭㆷ | ŋ̍ | `G` | ng | ng | ng | 禈 |
 
 ## 本方案拼音
 
@@ -159,30 +152,28 @@
 
 - 不使用二合字母（如 ph、ts、ng、oo、nn）、三合字母（如 tsh）
 - 使用了字母 ø
-- 大小寫有不同意義
+- 大小寫有不同意義（送氣音、韻尾、雙母音）
+- 將 m、n、ng 視為 b、d、g 在鼻化韻母前的變體
 - 將 -p、-t、-k 視為 -m、-n、-ng 在入聲調時的變體
 
 | Yu | TL | POJ | BP | | Yu | TL | POJ | BP |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| `a` | a   | a   | a  | |     |     |     |     |
-| `b` | b   | b   | bb | |     |     |     |     |
-| `c` | tsh | chh | c  | |     |     |     |     |
-| `e` | e   | e   | e  | |     |     |     |     |
-| `g` | g   | g   | gg | |     |     |     |     |
-| `h` | h   | h   | h  | |     |     |     |     |
-| `i` | i   | i   | i  | | `I` | ai  | ai  | ai  |
-| `j` | j   | j   | zz | |     |     |     |     |
-| `k` | k   | k   | g  | | `K` | kh  | kh  | k   |
-| `l` | l   | l   | l  | |     |     |     |     |
-| `m` | m   | m   | bb | | `M` | -m  | -m  | -m  |
-| `n` | n   | n   | l  | | `N` | -n  | -n  | -n  |
-| `o` | oo  | o͘	  | oo | |     |     |     |     |
-| `ø` | o   | o   | o  | |     |     |     |     |
-| `p` | p   | p   | b  | | `P` | ph  | ph  | p   |
-| `q` | ng  | ng  | gg | | `Q` | -ng | -ng | -ng |
-| `s` | s   | s   | s  | |     |     |     |     |
-| `t` | t   | t   | d  | | `T` | th  | th  | t   |
-| `u` | u   | u   | u  | | `U` | au  | au  | au  |
-|     |     |     |    | | `X` | -nn | -ⁿ  | -n- |
-| `z` | ts  | ch  | z  | |     |     |     |     |
+| `a` | a    | a    | a  | |     |        |        |        |
+| `b` | b/m  | b/m  | bb | | `B` | -m/-p  | -m/-p  | -m/-p  |
+| `c` | tsh  | chh  | c  | |     |        |        |        |
+| `d` | l/n  | l/n  | l  | | `D` | -n/-t  | -n/-t  | -n/-t  |
+| `e` | e    | e    | e  | |     |        |        |        |
+| `g` | g/ng | g/ng | gg | | `G` | -ng/-k | -ng/-k | -ng/-k |
+| `h` | h    | h    | h  | |     |        |        |        |
+| `i` | i    | i    | i  | | `I` | ai     | ai     | ai     |
+| `j` | j    | j    | zz | |     |        |        |        |
+| `k` | k    | k    | g  | | `K` | kh     | kh     | k      |
+|     |      |      |    | | `N` | -nn    | -ⁿ     | -n-    |
+| `o` | oo   | o͘    | oo | |     |        |        |        |
+| `ø` | o    | o    | o  | |     |        |        |        |
+| `p` | p    | p    | b  | | `P` | ph     | ph     | p      |
+| `s` | s    | s    | s  | |     |        |        |        |
+| `t` | t    | t    | d  | | `T` | th     | th     | t      |
+| `u` | u    | u    | u  | | `U` | au     | au     | au     |
+| `z` | ts   | ch   | z  | |     |        |        |        |
 
