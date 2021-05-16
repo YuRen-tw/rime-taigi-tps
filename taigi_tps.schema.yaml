@@ -4,7 +4,7 @@
 schema:
   schema_id: taigi_tps
   name: 台語方音
-  version: '0.3'
+  version: '0.4'
   author:
     - Yu-Ren Pan <YuRen.Pan.0117@gmail.com>
   description: |
@@ -12,9 +12,9 @@ schema:
     
     鍵盤對應：
       ㄅ ㄉ ３ ２ ７ ５ ． ㄚ ㄞ ㄢ ｎ
-      ㄆ ㄊ ㄍ ㄐ Ｊ ㄗ ㄧ ㆦ ㆰ ㄣ
+      ㄆ ㄊ ㄍ ㄐ ㆣ ㄗ ㄧ ㆦ ㆤ ㄣ
       ㄇ ㄋ ㄎ ㄑ ㄫ ㄘ ㄨ ㄜ ㄠ ㄤ
-      ㆠ ㄌ ㄏ ㄒ ㆣ ㄙ ㆬ ㆤ ㆲ ㆭ
+      ㆠ ㄌ ㄏ ㄒ Ｊ ㄙ ㆬ ㆰ ㆲ ㆭ
 
 
 switches:
@@ -83,13 +83,14 @@ speller:
     - xform/C(N?i)/J$1/  # ㄑㄧ
     - xform/s(N?i)/S$1/  # ㄒㄧ
     # 方音符號會分 ㄇㄋㄫ 和 ㆠㄌㆣ
-    - xform/bN/m/  # ㄇ
-    - xform/dN/n/  # ㄋ
-    - xform/gN/q/  # ㄫ
-    - xform/bG/mG/  # ㄇㆭ
-    - xform/dG/nG/  # ㄋㆭ
-    # 鼻音拍佇後壁
-    - xform/N([iu]?[iuaoeIU])/$1N/
+    - derive/bN/m/  # ㄇ
+    - derive/dN/n/  # ㄋ
+    - derive/gN/q/  # ㄫ
+    - derive/bG/mG/  # ㄇㆭ
+    - derive/dG/nG/  # ㄋㆭ
+    # 鼻音
+    - xform/N([iu]?[iuaoeIU])/$1N/  # 鼻音拍佇後壁
+    - derive/([iuaoeIU])N/$1$1/     # 拍兩擺韻母來拍鼻音
     # 注音
     - derive/øG/G/  # 用 ㄧㆭ 來拍 ㄧㄥ（併入）
     - derive/(?<!i)oG/uG/  # 用 ㄨㆭ（注音的 ㄨㄥ）來拍 ㆲ
@@ -110,7 +111,7 @@ speller:
     - abbrev/^([pPbmtTdnkKgqcCzsjJSh]).+$/$1/  # 會當干焦拍聲母
     - abbrev/^(\D+)([123579])$/$1/  # 除了第四調、第八調，調號會當免拍
     - abbrev/^([pPbmtTdnkKgqcCzsjJSh]).+(\d)$/$1$2/  # 會當干焦拍子音+調號
-    - xlit|pPmbtTndkKhjJSzqgcCsiuBaoøeIMUYLDQGN123570|1qaz2wsxedcrfvtgbyhnujm8ik,9ol.0p;/- 43657|
+    - xlit|pPmbtTndkKhjJSgqzcCsiuBaoøMIeUYLDQGN123570|1qaz2wsxedcrfvtgbyhnujm8ik,9ol.0p;/- 43657|
 
 translator:
   dictionary: taigi_yu
@@ -159,7 +160,7 @@ translator:
   preedit_format:
     - xform/ /ˉ/
     - xform/'/ /
-    - xlit|1qaz2wsxedcrfvtgbyhnujm8ik,9ol.0p;/-43657|ㄅㄆㄇㆠㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㆡㄫㆣㄗㄘㄙㄧㄨㆬㄚㆦㄜㆤㄞㆰㄠㆲㄢㄣㄤㆭｎˋ˪ˊ˫．|
+    - xlit|1qaz2wsxedcrfvtgbyhnujm8ik,9ol.0p;/-43657|ㄅㄆㄇㆠㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㆣㄫㆡㄗㄘㄙㄧㄨㆬㄚㆦㄜㆰㄞㆤㄠㆲㄢㄣㄤㆭｎˋ˪ˊ˫．|
     # 拆韻母
     - xform/ㆰ/ㄚㆬ/
     - xform/ㄢ/ㄚㄣ/
@@ -171,13 +172,13 @@ translator:
     # 咱共 ㆢ 和 ㆡ 合併
     - xform/ㆡㄧ/ㆢㄧ/
     # 鼻音
-    - xform/ㄧｎ/ㆪ/
-    - xform/ㄨｎ/ㆫ/
-    - xform/ㄚｎ/ㆩ/
-    - xform/ㆦｎ/ㆧ/
-    - xform/ㆤｎ/ㆥ/
-    - xform/ㄞｎ/ㆮ/
-    - xform/ㄠｎ/ㆯ/
+    - xform/ㄧ(ㄧ|ｎ)/ㆪ/
+    - xform/ㄨ(ㄨ|ｎ)/ㆫ/
+    - xform/ㄚ(ㄚ|ｎ)/ㆩ/
+    - xform/ㆦ(ㆦ|ｎ)/ㆧ/
+    - xform/ㆤ(ㆤ|ｎ)/ㆥ/
+    - xform/ㄞ(ㄞ|ｎ)/ㆮ/
+    - xform/ㄠ(ㄠ|ｎ)/ㆯ/
     # 入聲調
     - xform/(ㄧ|ㄚ|ㆦ)(ㄅ|ㆬ)．/$1ㆴ/
     - xform/(ㄧ|ㄨ|ㄚ|ㆤ)(ㄉ|ㄣ)．/$1ㆵ/
